@@ -1,9 +1,10 @@
-package com.english.service.app.config;
+package com.project.information.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.english.service.app")
+@ComponentScan(basePackages = "com.project.information")
 public class Config {
+
 }
