@@ -5,13 +5,9 @@ import com.project.information.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
-
 @RestController
-@RequestMapping("/user")
 public class PersonController {
 
     PersonService personService;
@@ -21,8 +17,8 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @GetMapping("/{id}")
-    public Optional<User> getUser(@PathVariable Long id){
+    @GetMapping("users/{id}")
+    public User getUser(@PathVariable Long id){
         return personService.getPersonAge(id);
     }
 }

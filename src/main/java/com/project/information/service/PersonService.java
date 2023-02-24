@@ -6,8 +6,6 @@ import com.project.information.service.impl.Impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class PersonService implements Impl {
 
@@ -19,7 +17,7 @@ public class PersonService implements Impl {
     }
 
     @Override
-    public Optional<User> getPersonAge(Long id) {
-        return personRepository.findById(id);
+    public User getPersonAge(Long id) {
+        return personRepository.getById(id);
     }
 }
